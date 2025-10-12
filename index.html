@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen And Pantry (KAP) - Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Kitchen And Pantry</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="construction-badge">🚧 Project Under Construction 🚧</div>
+            <h1>Kitchen And Pantry</h1>
+            <p class="subtitle">Your Complete Cooking Companion</p>
+            <p class="description">
+                KAP is the integrated cooking platform that bridges the gap between recipe planning and kitchen execution. 
+                From recipe development to inventory management, shopping lists to cooking assistance — all in one seamless experience.
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <h3>Recipe Development</h3>
+                    <p>Create, edit, and manage multiple versions of recipes with collaborative development features and version control for iterative refinement.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👨‍🍳</span>
+                    <h3>Cooking Assistance</h3>
+                    <p>Step-by-step guided cooking with integrated timers, voice guidance, and kitchen-optimized interfaces that work with messy hands.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📦</span>
+                    <h3>Inventory Management</h3>
+                    <p>Digital pantry tracking with automatic quantity updates, expiration monitoring, and smart ingredient availability checking.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛒</span>
+                    <h3>Smart Shopping Lists</h3>
+                    <p>Automatically generated shopping lists based on selected recipes and current inventory, with family sharing capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="target-users">
+        <div class="container">
+            <h2>Built For</h2>
+            <p class="subtitle">Designed for home cooks, recipe developers, and culinary enthusiasts who want to streamline their entire cooking workflow</p>
+            <div class="users-grid">
+                <div class="user-card">
+                    <span class="icon">👩‍🍳</span>
+                    <h4>Home Cooking Enthusiasts</h4>
+                    <p>Regular home cooks who enjoy experimenting with recipes and need organized cooking guidance</p>
+                </div>
+                <div class="user-card">
+                    <span class="icon">📖</span>
+                    <h4>Recipe Developers</h4>
+                    <p>Food bloggers and creators who need version control and testing documentation for original recipes</p>
+                </div>
+                <div class="user-card">
+                    <span class="icon">👨‍👩‍👧‍👦</span>
+                    <h4>Busy Families</h4>
+                    <p>Time-constrained households juggling schedules who need efficient meal planning and pantry optimization</p>
+                </div>
+                <div class="user-card">
+                    <span class="icon">🎓</span>
+                    <h4>Cooking Beginners</h4>
+                    <p>Those with limited experience who need step-by-step guidance and confidence-building assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mvp-section">
+        <div class="container">
+            <h2>Minimum Viable Product</h2>
+            <div class="mvp-content">
+                <p>
+                    <strong>Phase 1:</strong> A web application focused on core recipe management and cooking assistance. 
+                    Features local storage for recipes, kitchen-friendly cooking interface with timers, 
+                    simple inventory tracking, and shopping list generation.
+                </p>
+                <p class="spacing">
+                    <strong>Coming Soon:</strong> User accounts, cross-device sync, mobile apps, voice control, 
+                    and collaborative recipe development with version control.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kitchen And Pantry Project. Currently in development.</p>
+            <p>Follow our progress on <a href="https://github.com/Ignyos/KitchenAndPantry" target="_blank" rel="noopener">GitHub</a></p>
+            <p><em>Drafted requirements with GitHub Copilot on October 11, 2025</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for feature cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to feature cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.feature-card, .user-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

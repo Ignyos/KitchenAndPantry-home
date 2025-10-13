@@ -207,6 +207,7 @@
             font-size: 2.5rem;
             margin-bottom: 50px;
             text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .roadmap-phases {
@@ -254,6 +255,7 @@
             border-radius: 50%;
             min-width: 45px;
             text-align: center;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         }
 
         .phase-header h3 {
